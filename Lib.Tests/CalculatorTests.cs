@@ -30,11 +30,13 @@ namespace Lib.Tests
         {
             // Given
             var calculator = new Calculator();
+            var leftOp = int.MaxValue;
+            var rightOp = 1;
 
             // When
             void Overflow()
             {
-                calculator.Add(int.MaxValue, 1);
+                var actualResult = calculator.Add(leftOp, rightOp);
             }
 
             // Then
